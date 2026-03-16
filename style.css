@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Hlavní barvy */
+    --primary: #76b0e8;
+    --primary-hover: #d5e2f1;
+
+    /* Tmavé barvy */
+    --dark: #0a1f44;
+    --text-dark: #222;
+
+    /* Světlé barvy */
+    --text-light: #666;
+    --bg: #ffffff;
+
+    --border: #e0e0e0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f8fb;
+    color: var(--dark);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+    background: var(--bg);
+    gap: 30px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+img {
+    border-radius: 11px;
+}
+
+.Nadpis {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+nav a.active {
+    color: var(--primary);
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 2px;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(to right, var(--dark), var(--primary));
+    color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    padding-bottom: 10px;
+    height: 70px;
+}
+
+.hero2 {
+    height: 50vh;
+    background: var(--primary);
+    color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.tlacitko2 {
+    border: 2px solid black;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: var(--bg);
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    scale: 1.02;
+    background-color: var(--dark);
+    color: #f4f8fb;
+}
+
+.section {
+    border: 2px solid rgb(214, 42, 42);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.obdelniky {
+    border: 2px solid black;
+    margin: 30px auto;
+    width: min(1100px, 95%);
+    display: flex;
+    gap: 1em;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.obdelniky .card {
+    padding: 2em;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 100%;
+    flex: 1 1 250px;
+}
+
+.card {
+    background: var(--bg);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 1em;
+}
+
+.obrazky {
+    margin: 15px;
+    max-width: 400px;
+    width: min(95%);
+    height: auto;
+    border: 2px solid black;
+    margin-bottom: 5px;
+}
+
+ol {
+    margin: 20px;
+    padding: 20px 2%;
+    text-align: left;
+}
+
+li {
+    margin: 15px;
+}
+
+.light {
+    background: #e6f0f8;
+}
+
+.formulář {
+    padding: 30px;
+}
+
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card2 {
+    width: 280px;
+    padding: 2rem;
+    text-align: center;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.card2:hover {
+    background: var(--primary-hover);
+    transform: translateY(-4px);
+}
+.card2:hover .btn {
+    background: var(--primary-hover);
+    color: rgb(26, 3, 3);
+}
+
+.description {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.price {
+    margin-bottom: 1.5rem;
+}
+
+.main {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.sub {
+    display: block;
+    margin-top: -4px;
+    color: var(--text-light);
+}
+
+.vat {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+footer {
+    background: var(--dark);
+    color: var(--bg);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    position: sticky;
+}
