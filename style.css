@@ -48,7 +48,7 @@ body {
     color: var(--primary-dark);
     line-height: 1.6;
 }
-
+/*
 /* Přepínač tématu */
 .theme-toggle {
     width: 45px;
@@ -63,7 +63,7 @@ body {
 
 .theme-toggle:hover {
     transform: rotate(20deg) scale(1.1);
-}
+} */
 
 .header {
     display: flex;
