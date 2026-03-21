@@ -305,12 +305,12 @@ body {
 }
 
 /* FORM */
-.form-section {
+.formulář-section {
     padding: 60px 10%;
     background: var(--primary-light);
 }
 
-.form {
+.formulář {
     max-width: 500px;
     margin: 0 auto;
     display: flex;
@@ -318,10 +318,10 @@ body {
     gap: 15px;
 }
 
-.form input[type="text"],
-.form input[type="password"],
-.form input[type="email"],
-.form input[type="date"] {
+.formulář input[type="text"],
+.formulář input[type="password"],
+.formulář input[type="email"],
+.formulář input[type="date"] {
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #ccc;
