@@ -10,25 +10,27 @@
         />
     </head>
     <body>
-        <header>
-            <div class="Nadpis">Naše chytrá lednice</div>
-            <img src="logo1.png" width="100" height="50" />
-            <nav>
-                <a href="1index.html">Domů</a>
+        <header class="header">
+            <div class="logo-wrap">
+                <img src="logo1.png" width="90" height="45" alt="logo projektu">
+                <span class="site-title">Naše chytrá lednice</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Domů</a>
                 <a href="2projekt.html">Projekt</a>
                 <a href="3komponenty.html">Komponenty</a>
-                <a href="4fungovani.html">Jak&nbsp;funguje</a>
+                <a href="4fungovani.html">Jak funguje</a>
                 <a href="5rozpočet.html" class="active">Rozpočet</a>
-                <a href="6tým.html">O&nbsp;nás</a>
+                <a href="6tým.html">O nás</a>
             </nav>
         </header>
 
         <section class="page-hero">
-            <h2>Rozpočet projektu</h2>
+            <h1>Rozpočet projektu</h1>
             <p>Přehled hlavních nákladů na stavbu chytré lednice.</p>
         </section>
         
-        <section class="content-section">
+        <section class="sekce-uvod">
             <table class="budget-table">
                 <tr><th>Komponenta</th><th>Cena</th></tr>
                 <tr><td>Kompresor</td><td>1500 Kč</td></tr>
@@ -39,35 +41,30 @@
 
         <section class="hero2"></section>
 
-        <div class="pricing">
-            <div class="card2">
-                <h2>Lorem ipsum</h2>
-                <p class="description">1 doména a 1 subdoména (www)</p>
-
-                <div class="price">
-                <span class="main">800 Kč</span>
-                <span class="sub">bez DPH / rok</span>
-                <span class="vat">968 Kč s DPH</span>
-            
-            <button class="btn">Objednat</button>
-            </div>
-            </div>
-
-            <div class="card2">
-                <h2>Lorem ipsum</h2>
-                <p class="description">1 doména a všechny subdomény</p>
-
-                <div class="price">
-                <span class="main">2 500 Kč</span>
-                <span class="sub">bez DPH / rok</span>
-                <span class="vat">3 025 Kč s DPH</span>
-                </div>
-
-                <button class="btn">Objednat</button>
-            </div>
+<section class="cena-section">
+    <div class="cena-card">
+        <h2>Doména + 1 subdoména</h2>
+        <p class="description">Základní varianta</p>
+        <div class="cena">
+            <span class="main">800 Kč</span>
+            <span class="sub">bez DPH / rok</span>
+            <span class="sub2">968 Kč s DPH</span>
         </div>
+        <button class="btn">Objednat</button>
+    </div>
 
+    <div class="cena-card">
+        <h2>Doména + všechny subdomény</h2>
+        <p class="description">Rozšířená varianta</p>
+        <div class="cena">
+            <span class="main">2 500 Kč</span>
+            <span class="sub">bez DPH / rok</span>
+            <span class="sub2">3 025 Kč s DPH</span>
+        </div>
+        <button class="btn">Objednat</button>
+    </div>
 
+</section>
 
         <footer>
             <p>2026 Naše chytrá lednice</p>
