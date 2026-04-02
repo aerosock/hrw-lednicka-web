@@ -3,8 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* LIGHT MODE – výchozí */
 :root {
     --primary-dark: #0a1f44;
     --primary-light: #5b8ab6;
@@ -12,35 +10,10 @@
     --white: #ffffff;
     --border: #ddd;
 
-    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
-    --shadow-header: 0 2px 10px rgba(0, 0, 0, 0.05);
+    --shadow-soft: 0 4px 12px rgba(0,0,0,0.05);
+    --shadow-header: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* DARK MODE – manuální */
-:root.dark {
-    --primary-dark: #dce7f5;
-    --primary-light: #8fb4d6;
-
-    --white: #0f1724;
-    --border: #2a3a55;
-
-    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.4);
-    --shadow-header: 0 2px 10px rgba(0, 0, 0, 0.4);
-}
-
-/* DARK MODE – automatický podle systému */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary-dark: #dce7f5;
-        --primary-light: #8fb4d6;
-
-        --white: #0f1724;
-        --border: #2a3a55;
-
-        --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.4);
-        --shadow-header: 0 2px 10px rgba(0, 0, 0, 0.4);
-    }
-}
 
 body {
     font-family: "Poppins", sans-serif;
@@ -81,6 +54,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+border-radius: 12px;
 }
 
 .site-title {
@@ -109,11 +83,7 @@ body {
 
 .hero {
     height: 90vh;
-    background: linear-gradient(
-        to right,
-        var(--primary-dark),
-        var(--primary-light)
-    );
+    background: linear-gradient(to right, var(--primary-dark), var(--primary-light));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,6 +94,10 @@ body {
 
 .hero-content h1 {
     font-size: 4rem;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
@@ -158,15 +132,20 @@ body {
     margin-bottom: 10px;
 }
 
-.sekce-uvod {
+.content-section {
     padding: 60px 10%;
 }
 
-.sekce-uvod.center {
+.content-section.center {
     text-align: center;
 }
 
-.vlastnosti {
+.intro-section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.features {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -186,57 +165,9 @@ body {
 .feature-box:hover {
     transform: translateY(-4px);
 }
-/* TABULKA ROZPOČTU */
-.budget-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 30px;
-    background: var(--white);
-    box-shadow: var(--shadow-soft);
-    border-radius: 10px;
-    overflow: hidden;
-}
 
-.budget-table th,
-.budget-table td {
-    padding: 15px;
-    border-bottom: 1px solid var(--border);
-    width: 50%;
-}
-
-.budget-table th {
-    background: var(--primary-light);
-    color: var(--white);
-    text-align: left;
-}
-
-/* CENÍK */
-.cena-section {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 60px 10%;
-    flex-wrap: wrap;
-}
-
-.cena-card {
-    background: var(--white);
-    padding: 25px;
-    width: 300px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: var(--shadow-soft);
-}
-
-.cena-card .cena .main {
-    font-size: 2rem;
-    font-weight: 700;
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* MRIZKY */
-.mrizka-projektu {
+/* PROJECT GRID */
+.project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
@@ -250,13 +181,14 @@ body {
     box-shadow: var(--shadow-soft);
 }
 
-.mrizka-komponent {
+/* COMPONENTS */
+.components-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
 }
 
-.card {
+.component-card {
     background: var(--white);
     padding: 20px;
     border-radius: 12px;
@@ -264,12 +196,13 @@ body {
     box-shadow: var(--shadow-soft);
 }
 
-.card img {
+.component-card img {
     width: 100%;
     border-radius: 10px;
     margin-top: 15px;
 }
 
+/* STEPS */
 .step-box {
     background: var(--white);
     padding: 25px;
@@ -277,8 +210,58 @@ body {
     box-shadow: var(--shadow-soft);
 }
 
+/* BUDGET TABLE */
+.budget-table {
+    width: 70%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+.budget-table th,
+.budget-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.budget-table th {
+    background: var(--primary-light);
+    color: var(--white);
+}
+
+/* CENA */
+.cena-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 60px 10%;
+}
+
+.cena-card {
+    width: 280px;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: 0.2s;
+}
+
+.cena-card:hover {
+    transform: translateY(-4px);
+}
+
+.cena .main {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 /* TEAM */
-.mrizka-tymu {
+.team-grid {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -335,7 +318,7 @@ body {
 .btn:hover {
     background: var(--primary-dark);
     scale: 1.02;
-    color: var(--border);
+    color:var(--border);
 }
 
 footer {
@@ -345,3 +328,4 @@ footer {
     padding: 25px;
     margin-top: 40px;
 }
+
