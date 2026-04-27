@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Naše chytrá lednice</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="logo-wrap">
+                <img src="logo1.png" height="45" alt="logo" />
+                <span class="site-title">Naše chytrá lednice</span>
+            </div>
+
+            <nav class="nav">
+                <a href="index.html">Domů</a>
+                <a href="2projekt.html">Projekt</a>
+                <a href="3komponenty.html">Komponenty</a>
+                <a href="4fungovani.html" class="active">Jak&nbsp;funguje</a>
+                <a href="5rozpočet.html">Rozpočet</a>
+                <a href="6tým.html">O&nbsp;nás</a>
+            </nav>
+        </header>
+
+        <section class="sekce">
+            <h2>Jak funguje Peltierovo chlazení</h2>
+            <div class="grid2">
+                <div class="component-card">
+                    <img src="obrázky/pelt zapojení.jpeg" alt="" />
+                </div>
+
+                <div class="box2">
+                    <h3>Princip Peltierova jevu (aktivní chlazení)</h3>
+                    <p>
+                        Když prochází elektrický proud spojem dvou různých
+                        polovodičových materiálů (typicky N‑typ a P‑typ),
+                        dochází k tomu, že:
+                    </p>
+                    <ol type="1">
+                        <li>
+                            elektrony (v N‑typu) a díry (v P‑typu) přenášejí
+                            energii,
+                        </li>
+                        <li>
+                            při přechodu přes spoj absorbují teplo → vzniká
+                            studená strana,
+                        </li>
+                        <li>
+                            na opačném spoji uvolňují teplo → vzniká teplá
+                            strana.
+                        </li>
+                    </ol>
+                    <p>
+                        Tento jev je reverzní k Seebeckovu jevu (kdy rozdíl
+                        teplot vytváří napětí).
+                    </p>
+                </div>
+
+                <div class="box2">
+                    <h3>
+                        Jak je Peltierův článek TEC1‑12715 konstruován uvnitř
+                        článku je:
+                    </h3>
+                    <p>
+                        Několik desítek až stovek P‑N polovodičových párů,
+                        zapojených elektricky do série (kvůli vyššímu napětí),
+                        ale&nbsp;tepelně paralelně (aby se teplo přenášelo přes
+                        celou plochu), vše&nbsp;je uzavřeno mezi dvě keramické
+                        destičky (obvykle Al₂O₃).
+                    </p>
+                    <p>Typické rozměry: 40 × 40 mm, tloušťka cca 3–4 mm.</p>
+                </div>
+
+                <div class="box2">
+                    <h3>Co se děje při provozu po připojení proudu:</h3>
+                    <p>
+                        Jedna strana se začne ochlazovat (odebírá teplo z
+                        okolí).
+                    </p>
+                    <p>Druhá se začne zahřívat (musí odvést teplo ven).</p>
+                    <br />
+                    <p>
+                        Teplá strana musí být aktivně chlazena (chladič +
+                        ventilátor),&nbsp;jinak:
+                    </p>
+                    <ol type="a">
+                        <li>klesá účinnost,</li>
+                        <li>roste teplota obou stran,</li>
+                        <li>článek se může přehřát a zničit.</li>
+                    </ol>
+                </div>
+                <div class="box2">
+                    <h3>
+                        Účinnost a výkon Peltierovy články mají nízkou účinnost
+                        – typicky:
+                    </h3>
+                    <p>
+                        Poměr příkon / chladicí výkon je 1,5 až 2,5 při malém
+                        ΔT, při větším rozdílu teplot účinnost dále klesá.
+                    </p>
+                    <p>Typické parametry TEC1‑12715:</p>
+                    <ol type="a">
+                        <li>maximální proud: 15 A</li>
+                        <li>napětí: 12–15 V</li>
+                        <li>chladicí výkon: cca 136 W (při ΔT ≈ 0 °C)</li>
+                        <li>maximální ΔT: 60–70 °C</li>
+                    </ol>
+                </div>
+
+                <div class="box2">
+                    <h3>
+                        Reverzní provoz – výroba elektřiny (TEG) pokud se článek
+                        nezatěžuje&nbsp;proudem, ale místo toho se:
+                    </h3>
+                    <ol type="a">
+                        <li>jedna strana zahřívá,</li>
+                        <li>druhá chladí,</li>
+                    </ol>
+                    <p>vzniká Seebeckův jev → článek generuje napětí.</p>
+                    <p>Typické hodnoty:</p>
+                    <ol type="a">
+                        <li>napětí: 0,1–1 V na článek (záleží na ΔT),</li>
+                        <li>
+                            vnitřní odpor je nízký → je potřeba DC‑DC měnič,
+                        </li>
+                        <li>
+                            účinnost je opět nízká, ale pro malé TEG aplikace
+                            použitelná.
+                        </li>
+                    </ol>
+                </div>
+                <div class="box2">
+                    <h3>
+                        Co znamená „zkrat“ u Peltierova článku pokud se článek
+                        zkratuje, chová se jako:
+                    </h3>
+                    <ol type="a">
+                        <li>nízkoohmový polovodičový blok,</li>
+                        <li>který se začne rychle zahřívat,</li>
+                        <li>protože proud není omezen.</li>
+                    </ol>
+                    <p>Zkrat tedy:</p>
+                    <ol type="a">
+                        <li>napětí: 0,1–1 V na článek (záleží na ΔT),</li>
+                        <li>
+                            vnitřní odpor je nízký → je potřeba DC‑DC měnič,
+                        </li>
+                        <li>
+                            účinnost je opět nízká, ale pro malé TEG aplikace
+                            použitelná.
+                        </li>
+                        <li>
+                            nevyvolá chlazení, protože není řízený proud, může
+                            článek trvale poškodit.
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="box2">
+                    <h3>Shrnutí</h3>
+                    <h3>Peltierův článek:</h3>
+                    <ol type="1" class="ol2">
+                        <li>
+                            přenáší teplo pomocí elektrického proudu (Peltierův
+                            jev),
+                        </li>
+                        <li>
+                            může fungovat i opačně jako generátor (Seebeckův
+                            jev),
+                        </li>
+                        <li>
+                            má nízkou účinnost a vyžaduje dobré chlazení teplé
+                            strany,
+                        </li>
+                        <li>
+                            je jednoduchý, kompaktní a bez pohyblivých částí.
+                        </li>
+                    </ol>
+                    <p>Pokud chcete, můžu vám také:</p>
+                    <ol type="a">
+                        <li>navrhnout praktické zapojení TEC1‑12715,</li>
+                        <li>spočítat potřebný chladič,</li>
+                        <li>nebo vysvětlit jak z něj udělat TEG generátor.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>2026 Naše chytrá lednice</p>
+        </footer>
+    </body>
+</html>
