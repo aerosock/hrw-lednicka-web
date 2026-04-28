@@ -28,32 +28,31 @@
 
 <section class="page-hero">
     <h1>Jak funguje lednice</h1>
-    <p>Zjednodušený princip chlazení v našem modelu.</p>
+    <p class="intro">Zjednodušený princip chlazení v našem modelu.</p>
 </section>
-
 <section class="sekce">
 	<h2>Existují čtyři odlišné principy chlazení ledniček</h2><br>
     <div class="components-grid">
-
-    <div class="step-box">
+        <div class="step-box">
             <h3>1. Kompresorové</h3>
-            <p>Pracuje na principu <u>stlačování a expanze</u> chladiva, které při odpařování odebírá teplo z vnitřního prostoru. Jde o nejběžnější a energeticky nejúčinnější typ používaný v domácnostech.</p>
-            </div>
+            <p>Nejběžnější typ – pracuje na stlačování a expanzi chladiva.</p>
+        </div>
 
-            <div class="step-box">
-                <h3>2. Absorpční</h3>
-                <p>Využívá <b>teplo</b> (například z plynu nebo elektrické spirály) k pohonu okruhu, kde se chladivo absorbuje a následně uvolňuje. Je tiché a vhodné tam, kde není dostupná elektřina, ale má nižší účinnost.</p>
-            </div>
+        <div class="step-box">
+            <h3>2. Absorpční</h3>
+            <p>Využívá teplo k pohonu okruhu. Tichý, ale méně účinný.</p>
+        </div>
 
-            <div class="step-box">
-                <h3>3. Adsorpční</h3>
-                <p>Funguje na tom, že pevná látka (adsorbent) váže a uvolňuje chladivo v závislosti na teplotě. Tento cyklus umožňuje chlazení bez pohyblivých částí a s velmi tichým provozem.</p>
-            </div>
+        <div class="step-box">
+            <h3>3. Adsorpční</h3>
+            <p>Chladivo se váže na pevnou látku. Bez pohyblivých částí.</p>
+        </div>
 
-            <div class="step-box">
-                <h3>4. Na bázi Peltierova&nbsp;článku</h3>
-                <p>Využívá <b>elektrický proud</b> pro vytvoření teplotního rozdílu mezi dvěma stranami polovodičového článku. Je kompaktní a bez vibrací, ale má nižší účinnost a omezený chladicí výkon.</p>
-            </div>
+        <div class="step-box">
+            <h3>4. Peltierův článek</h3>
+            <p>Elektrický proud vytváří teplotní rozdíl mezi dvěma stranami.</p>
+        </div>
+    </div>
 </section>
 
 <section class="sekce">
@@ -64,8 +63,11 @@
     </div>
 </section>
 
-<!-- PELTIER PRINCIP -->
 <section class="page-hero">
+    <h2>Proč Peltierův článek?</h2>
+    <p>Jednoduchý, bezpečný, bez pohyblivých částí. Pro školní projekt ideální volba.</p>
+</section>
+<section class="sekce">
     <h2>Jak funguje Peltierovo chlazení</h2>
     <p class="intro">Peltierův článek TEC1‑12715 přenáší teplo z jedné strany na druhou pomocí elektrického proudu.</p>
     <p> Peltierovo chlazení funguje na termoelektrickém jevu, kdy elektrický proud přenáší teplo proti jeho přirozenému směru.</p><br>
@@ -98,7 +100,7 @@
 </section>
 
 <!-- ELEKTRONIKA -->
-<section class="sekce">
+<section class="page-hero">
     <h2>Elektronické řízení</h2>
     <p class="intro">
         ESP32 řídí výkon Peltierova článku pomocí PWM a MOSFET tranzistoru.
@@ -113,32 +115,28 @@
 </section>
 
 <!-- KONSTRUKCE -->
-<section class="page-hero">
+<section class="sekce">
     <h2>Konstrukce lednice</h2>
     <p class="intro">
         Konstrukce využívá principu „krabice v krabici“ s pěnovou izolací.
     </p><br>
 
     <div class="grid">
-        <div class="box"><h3>Vnější schránka</h3><p>Nosná konstrukce.</p></div>
-        <div class="box"><h3>Vnitřní schránka</h3><p>Chlazený prostor.</p></div>
+        <div class="box"><h3>Vnější schránka</h3><p>Nosná konstrukce. /**/</p></div>
+        <div class="box"><h3>Vnitřní schránka</h3><p>Chlazený prostor.</p>
+                <p>Využití regulerního chadiče PCU a vodního chadiče</p></div>
         <div class="box"><h3>Izolace</h3><p>Montážní pěna minimalizuje ztráty.</p></div>
-        <div class="box"><h3>Vodní chlazení</h3><p>Odvádí teplo ven.</p></div>
     </div>
 </section>
 
-<!-- TESTOVÁNÍ -->
-<section class="sekce">
+
+<section class="page-hero">
     <h2>Testování a měření</h2>
-    <p class="intro">
-        Během testování jsme sledovali stabilitu, rychlost chlazení a efektivitu.
-    </p>
+    <p class="intro">Sledovali jsme stabilitu, rychlost chlazení a efektivitu.</p>
 
     <div class="grid">
         <div class="box"><h3>Stabilita</h3><p>±1 °C od cílové hodnoty.</p></div>
         <div class="box"><h3>Rychlost chlazení</h3><p>20 °C → 5 °C za 18 minut.</p></div>
-        <div class="box"><h3>Výkon</h3><p>60–80 % PWM.</p></div>
-        <div class="box"><h3>Odvod tepla</h3><p>Radiátor pod 40 °C.</p></div>
     </div>
 </section>
 
