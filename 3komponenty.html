@@ -1,138 +1,170 @@
 <!doctype html>
 <html lang="cs">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Komponenty</title>
-        <link rel="stylesheet" href="style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <title>Komponenty</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
 
-    <body>
-            <header class="header">
-            <div class="logo-wrap">
-                <img src="logo1.png" height="45" alt="logo">
-                <span class="site-title">Naše chytrá lednice</span>
-            </div>
-        
-            <nav class="nav">
-                <a href="index.html">Domů</a>
-                <a href="2projekt.html">Projekt</a>
-                <a href="3komponenty.html" class="active">Komponenty</a>
-                <a href="4fungovani.html">Jak&nbsp;funguje</a>
-                <a href="5rozpočet.html">Rozpočet</a>
-                <a href="6tým.html">O&nbsp;nás</a>
-            </nav>
-        </header>
-        
-        <section class="page-hero">
-            <h1>Hlavní komponenty</h1>
-            <p>Součásti, které tvoří naši chytrou lednici.</p>
-        </section>
-        
-        <section class="content-section">
+<body>
+
+<header class="header">
+    <div class="logo-wrap">
+        <img src="logo1.png" height="45" alt="logo">
+        <span class="site-title">Naše chytrá lednice</span>
+    </div>
+
+    <nav class="nav">
+        <a href="index.html">Domů</a>
+        <a href="2projekt.html">Projekt</a>
+        <a href="3komponenty.html" class="active">Komponenty</a>
+        <a href="4fungovani.html">Jak&nbsp;funguje</a>
+        <a href="5rozpočet.html">Rozpočet</a>
+        <a href="6tým.html">O&nbsp;nás</a>
+        <button id="tlacitko" class="theme-toggle" aria-label="Přepnout režim">🌙</button>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h1>Hlavní komponenty</h1>
+    <p>Součásti, které tvoří naši chytrou lednici.</p>
+</section>
+
+<section class="content-section">
     <h2>Vymodelované součástky v 3D modelátoru Blenderu</h2>
     <div class="components-grid">
         <div class="component-card">
-            <h3></h3>
-            <p>Roh krabice 8x</p>
-            <img  src="obrázky/komp.png" alt="">
-        </div>
-            <p>jiné úhly</p>
-            <img  src="obrázky/komp2.png" alt="">
+            <p>Roh krabice (8×)</p>
+            <img src="obrázky/komp.png" alt="Roh krabice">
         </div>
         <div class="component-card">
-            <p>jiné úhly</p>
-            <img  src="obrázky/komp3.png" alt="">
+            <p>Roh krabice – jiné úhly</p>
+            <img src="obrázky/komp2.png" alt="Roh krabice z jiného úhlu">
+        </div>
+        <div class="component-card">
+            <p>Roh krabice – jiné úhly</p>
+            <img src="obrázky/komp3.png" alt="Roh krabice z jiného úhlu">
         </div>
         <p>Rohové díly byly navrženy v Blenderu a slouží k pevné konstrukci vnitřní i vnější krabice.</p>
-    </div><br><br>
+        <div class="component-card">
+            <p>Krabice – vnější</p>
+            <img src="obrázky/krabice_vnejsi.png" alt="Vnější krabice">
+        </div>
+        <div class="component-card">
+            <p>Krabice – vnitřní</p>
+            <img src="obrázky/krabice_vnitrni.png" alt="Vnitřní krabice">
+        </div>
+    </div>
+
+    <br>
     <h2>Zakoupené komponenty</h2><br>
     <div class="components-grid">
 
         <div class="component-card">
             <h3>CPU vodní chladič</h3>
             <p>Reguluje teplotu uvnitř zařízení.</p>
-            <img src="obrázky/chladič vodni.png" alt="">
+            <img src="obrázky/chladič vodni.png" alt="CPU vodní chladič">
         </div>
 
         <div class="component-card">
             <h3>Vodní chladič Navis Pro 240</h3>
             <p>Zajišťuje odsun teplého vzduchu.</p>
-            <img src="obrázky/vodn.chladič.png" alt="">
+            <img src="obrázky/vodn.chladič.png" alt="Vodní chladič Navis Pro 240">
         </div>
 
         <div class="component-card">
             <h3>Vývojová deska ESP32</h3>
-            <p>Řídicí jednotka projektu.</p>
-            <img src="obrázky/deska.png" alt="">
+            <p>Řídicí jednotka projektu (240 MHz, WiFi, Bluetooth).</p>
+            <img src="obrázky/deska.png" alt="ESP32 deska">
         </div>
 
         <div class="component-card">
             <h3>MOSFET PWM LR7843</h3>
             <p>Řízení výkonu Peltierova článku.</p>
-            <img src="obrázky/mosfet.png" alt="">
+            <img src="obrázky/mosfet.png" alt="MOSFET LR7843">
         </div>
 
         <div class="component-card">
             <h3>Mikrospínače (2 ks)</h3>
             <p>Detekce otevření dveří.</p>
-            <img src="obrázky/mikros.png" alt="">
+            <img src="obrázky/mikros.png" alt="Mikrospínače">
         </div>
 
         <div class="component-card">
             <h3>NTC Termistor 10K</h3>
             <p>Měření teploty.</p>
-            <img src="obrázky/termistor.png" alt="">
+            <img src="obrázky/termistor.png" alt="NTC termistor">
         </div>
 
         <div class="component-card">
             <h3>Peltierův článek TEC1-12715</h3>
             <p>Hlavní chladicí prvek.</p>
-            <img src="obrázky/pelt.cl..png" alt="">
+            <img src="obrázky/pelt.cl..png" alt="Peltierův článek">
         </div>
 
         <div class="component-card">
-            <h3>Display</h3>
+            <h3>Displej</h3>
             <p>Zobrazení teploty.</p>
-            <img src="obrázky/display.png" alt="">
+            <img src="obrázky/display.png" alt="Displej">
         </div>
+
         <div class="component-card">
             <h3>Potenciometr</h3>
-            <p>Použit jako nastavitelný odpor nebo dělič napětí = Regulace teploty</p>
-            <img src="obrázky/potenciometr.png" alt="">
+            <p>Regulace teploty (nastavitelný odpor / dělič napětí).</p>
+            <img src="obrázky/potenciometr.png" alt="Potenciometr">
         </div>
 
         <div class="component-card">
             <h3>Rezistor 10K</h3>
             <p>Součást měření teploty.</p>
-            <img src="obrázky/rezistor.png" alt="">
+            <img src="obrázky/rezistor.png" alt="Rezistor 10K">
         </div>
         
         <div class="component-card">
             <h3>Montážní pěna</h3>
             <p>Izolace vnitřního prostoru.</p>
-            <img src="obrázky/pěna.png" alt="">
+            <img src="obrázky/pěna.png" alt="Montážní pěna">
         </div>
 
         <div class="component-card">
             <h3>Krabice (2×)</h3>
-            <p>Konstrukční základ.</p><br>
-            <img src="obrázky/krabice.png" alt="">
+            <p>Konstrukční základ.</p>
+            <img src="obrázky/krabice.png" alt="Krabice">
         </div>
+
         <div class="component-card">
             <h3>Zdroj</h3>
-            <p></p>
-            <img src="obrázky/" alt="">
+            <p>Napájení celého systému.</p>
+            <img src="obrázky/zdroj.png" alt="Zdroj">
         </div>
 
     </div>
 </section>
-        
-        <footer>
-            <p>2026 Naše chytrá lednice</p>
-        </footer>
-    </body>
+
+<footer>
+    <p>2026 Naše chytrá lednice</p>
+</footer>
+<script>
+    const tlacitko = document.querySelector("#tlacitko");
+
+    // 1) Při načtení stránky nastavíme režim podle localStorage
+    if (localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("nocnimod");
+    }
+
+    // 2) Po kliknutí přepínáme režim
+    tlacitko.addEventListener('click', function() {
+        document.body.classList.toggle("nocnimod");
+
+        // 3) Uložíme volbu uživatele
+        if (document.body.classList.contains("nocnimod")) {
+            localStorage.setItem("mode", "dark");
+        } else {
+            localStorage.setItem("mode", "light");
+        }
+    });
+</script>
+
+</body>
 </html>
