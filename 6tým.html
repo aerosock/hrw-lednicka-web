@@ -1,16 +1,15 @@
 <!doctype html>
 <html lang="cs">
-    <head>
-        <meta charset="UTF-8" />
-        <title>O nás</title>
-        <link rel="stylesheet" href="style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <header class="header">
+<head>
+    <meta charset="UTF-8" />
+    <title>O nás</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+<header class="header">
     <div class="logo-wrap">
         <img src="logo1.png" height="45" alt="logo">
         <span class="site-title">Naše chytrá lednice</span>
@@ -23,6 +22,7 @@
         <a href="4fungovani.html">Jak&nbsp;funguje</a>
         <a href="5rozpočet.html">Rozpočet</a>
         <a href="6tým.html" class="active">O&nbsp;nás</a>
+        <button id="tlacitko" class="theme-toggle" aria-label="Přepnout režim">🌙</button>
     </nav>
 </header>
 
@@ -32,32 +32,36 @@
 </section>
 
 <section class="content-section">
-    <p class="center">Jsme studenti 3. ročníku SPŠ a Gymnázia Na Třebešíně</p>
+    <p class="center">Jsme studenti 3. ročníku SPŠ a Gymnázia Na Třebešíně.</p>
     <div class="project-grid">
 
         <div class="box">
-            <h3>Kudinov Kostiantyn</h3>
+            <h3>🧠 Kudinov Kostiantyn</h3>
             <h4>kudinov123@trebesin.cz</h4>
             <p>Technický návrh a výzkum principu chlazení.</p>
-            <p>Seznam potřebných součástí</p>
-            <p>Funkční logika hlavního programu (bez fin. ladění)</p>
+            <p>Seznam potřebných součástí.</p>
+            <p>Funkční logika hlavního programu (bez finálního ladění).</p>
         </div>
 
         <div class="box">
-            <h3>Jonáš Jansa</h3>
+            <h3>🛠 Jonáš Jansa</h3>
             <h4>jansa123@trebesin.cz</h4>
             <p>Konstrukce a sestavení komponentů.</p>
-            <p>Zpracování  3D modelů (konstrukce)</p>
+            <p>Zpracování 3D modelů (konstrukce).</p>
         </div>
 
         <div class="box">
-            <h3>Hana Dobrá</h3>
+            <h3>💻🎨 Hana Dobrá</h3>
             <h4>dobra123@trebesin.cz</h4>
-            <p>Tvorba webová stránka ve <u>Visual Studio Code</u> s použitím HTML a CSS a dokumentace projektu.</p>
+            <p>Tvorba webové stránky ve Visual Studio Code s použitím HTML a CSS.</p>
+            <p>Dokumentace projektu.</p>
         </div>
-        <P>spolupráce – GitHub? a OneDrive sdílené dokumenty? </P>
     </div>
+
+    <br>
+    <p class="center">Spolupráce – GitHub a sdílené dokumenty na OneDrivu.</p>
 </section>
+
 <section class="formulář-section">
     <form class="formulář">
         <label for="jmeno">Jméno</label>
@@ -80,13 +84,36 @@
         </div>
 
         <div class="form-buttons">
-            <input type="reset" class="btn">
-            <input type="submit" class="btn">
+            <input type="reset" class="btn" value="Reset">
+            <input type="submit" class="btn" value="Odeslat">
         </div>
     </form>
 </section>
-        <footer>
-            <p>2026 Naše chytrá lednice</p>
-        </footer>
-    </body>
+
+<footer>
+    <p>2026 Naše chytrá lednice</p>
+</footer>
+
+<script>
+    const tlacitko = document.querySelector("#tlacitko");
+
+    // 1) Při načtení stránky nastavíme režim podle localStorage
+    if (localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("nocnimod");
+    }
+
+    // 2) Po kliknutí přepínáme režim
+    tlacitko.addEventListener('click', function() {
+        document.body.classList.toggle("nocnimod");
+
+        // 3) Uložíme volbu uživatele
+        if (document.body.classList.contains("nocnimod")) {
+            localStorage.setItem("mode", "dark");
+        } else {
+            localStorage.setItem("mode", "light");
+        }
+    });
+</script>
+
+</body>
 </html>
