@@ -1,16 +1,15 @@
 <!doctype html>
 <html lang="cs">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Projekt</title>
-        <link rel="stylesheet" href="style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <header class="header">
+<head>
+    <meta charset="UTF-8" />
+    <title>Projekt</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+<header class="header">
     <div class="logo-wrap">
         <img src="logo1.png" height="45" alt="logo">
         <span class="site-title">Naše chytrá lednice</span>
@@ -23,6 +22,7 @@
         <a href="4fungovani.html">Jak&nbsp;funguje</a>
         <a href="5rozpočet.html">Rozpočet</a>
         <a href="6tým.html">O&nbsp;nás</a>
+        <button id="tlacitko" class="theme-toggle" aria-label="Přepnout režim">🌙</button>
     </nav>
 </header>
 
@@ -32,88 +32,84 @@
 </section>
 
 <section class="sekce">
-    <div class="content-wrapper">
-        <h2>Co vytváříme?</h2>
-        <p>
-            Cílem projektu je navrhnout a sestavit model chytré lednice z jednotlivých komponentů.
-            Zaměřujeme se na efektivní chlazení a regulaci teploty.
-        </p>
+    <h2>Co vytváříme?</h2>
+    <p class="intro">
+        Navrhujeme model chytré lednice s důrazem na efektivní chlazení, regulaci teploty a moderní konstrukci.
+    </p>
 
-        <div class="project-grid">
-            <div class="krabice">
-                <h3>Výzkum</h3>
-                <p>Studujeme principy chlazení a fyzikální procesy.</p>
-            </div>
+    <div class="project-grid">
+        <div class="krabice">
+            <h3>🔍 Výzkum</h3>
+            <p>Studujeme principy chlazení a fyzikální procesy.</p>
+        </div>
 
-            <div class="krabice">
-                <h3>Konstrukce</h3>
-                <p>Navrhujeme a stavíme fyzickou strukturu lednice.</p>
-            </div>
+        <div class="krabice">
+            <h3>📦 Konstrukce</h3>
+            <p>Navrhujeme a stavíme fyzickou strukturu lednice.</p>
+        </div>
 
-            <div class="krabice">
-                <h3>Elektronika</h3>
-                <p>Řídicí jednotka ESP32, termistor, MOSFET a další prvky.</p>
-            </div>
+        <div class="krabice">
+            <h3>⚡ Elektronika</h3>
+            <p>ESP32, termistor, MOSFET a další prvky řídí celý systém.</p>
+        </div>
 
-            <div class="krabice">
-                <h3>Testování</h3>
-                <p>Měříme teplotu, efektivitu a stabilitu chlazení.</p>
-            </div>
+        <div class="krabice">
+            <h3>🧪 Testování</h3>
+            <p>Měříme teplotu, efektivitu a stabilitu chlazení.</p>
         </div>
     </div>
 </section>
-<section class="page-hero">
-    <div class="project-grid">
-            <div class="krabice">
-                <h3>cíle projektu</h3>
-                <p>cílová teplota, objem lednice, účinnost</p>
-                <p> Model je navržen tak, aby dokázal udržet teplotu kolem 5 °C v prostoru o objemu přibližně 15 litrů. Během vývoje jsme postupovali od návrhu konstrukce přes testování jednotlivých komponent až po integraci elektroniky.</p>
-            </div>
 
-            <div class="krabice">
-            <h3>Prototypování</h3>
+<section class="sekce light">
+    <h2>Cíle projektu</h2>
+
+    <div class="project-grid">
+        <div class="krabice">
+            <h3>🎯 Technické cíle</h3>
+            <p>Model udržuje teplotu kolem 5 °C v prostoru o objemu 15 litrů.</p>
+            <p>Postupujeme od návrhu konstrukce přes testování až po integraci elektroniky.</p>
+        </div>
+
+        <div class="krabice">
+            <h3>🛠️ Prototypování</h3>
             <p>První verze vznikaly na nepájivém poli, kde jsme testovali zapojení a funkčnost.</p>
         </div>
-            
-        </div>
+    </div>
 </section>
 
 <section class="sekce">
-    <p>Krátký odstavec o tom, jak probíhá vývoj – plán, milníky.</p><br>
-   
-    <img src="obrázky/real (2).jpg" alt="" height="600px">
-    <div class="project-grid">
-        <div class="krabice">
-            <h3>Potenciometr (otáčecí knoflík)</h3>
-            <p>Ten velký kovový prvek s hřídelí. Má tři vývody.
+    <h2>Průběh vývoje</h2>
+    <p class="intro">Vývoj probíhal v několika fázích – od návrhu, přes prototypování až po finální konstrukci.</p>
 
-        Slouží jako nastavitelný odpor – typicky pro řízení: jasu LED, hlasitosti, analogového vstupu do mikrokontroléru (ESP32, Arduino…).</p>
-            <p>Umožňuje zapojovat obvody bez pájení.</p>
-            <p>Vnitřní řady jsou propojené, takže se komponenty snadno spojují.</p>
-        </div>
-
-        <div class="krabice">
-            <h3>Nepájivé pole (breadboard)</h3>
-            <p>Bílá plastová destička s otvory.</p>
-            <p>Umožňuje zapojovat obvody bez pájení.</p>
-            <p>Vnitřní řady jsou propojené, takže se komponenty snadno spojují.</p>
-        </div>
-
-        <div class="krabice">
-            <h3>Propojovací vodiče (jumper wires)</h3>
-            <p>Barevné drátky (červené, žluté, oranžové, fialové, černé…).
-            Slouží k propojení: napájení, signálů, země, vývodů potenciometru</p>
-        </div>
-
-        <div class="krabice">
-            <h3>Napájecí vedení</h3>
-            <p>Vypadá to, že vodiče vedou do bočních napájecích lišt breadboardu. Potenciometr je pravděpodobně zapojen jako dělič napětí: jeden krajní pin → + druhý krajní pin → GND prostřední pin → analogový vstup</p>
-        </div>
-    </div>
+    <img src="obrázky/real (2).jpg" alt="foto vývoje" class="wide-img" height="500">
+    <br><br>
+    <a href="timeline.html" class="btn2">Časová osa vývoje</a>
 </section>
-        
-        <footer>
-            <p>2026 Naše chytrá lednice</p>
-        </footer>
-    </body>
+
+<footer>
+    <p>2026 Naše chytrá lednice</p>
+</footer>
+
+<script>
+    const tlacitko = document.querySelector("#tlacitko");
+
+    // 1) Při načtení stránky nastavíme režim podle localStorage
+    if (localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("nocnimod");
+    }
+
+    // 2) Po kliknutí přepínáme režim
+    tlacitko.addEventListener('click', function() {
+        document.body.classList.toggle("nocnimod");
+
+        // 3) Uložíme volbu uživatele
+        if (document.body.classList.contains("nocnimod")) {
+            localStorage.setItem("mode", "dark");
+        } else {
+            localStorage.setItem("mode", "light");
+        }
+    });
+</script>
+
+</body>
 </html>
