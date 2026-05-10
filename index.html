@@ -1,15 +1,13 @@
 <!doctype html>
 <html lang="cs">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Naše chytrá lednice</title>
-        <link rel="stylesheet" href="style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8" />
+    <title>Naše chytrá lednice</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
 <header class="header">
     <div class="logo-wrap">
         <img src="logo1.png" height="45" alt="logo">
@@ -23,6 +21,7 @@
         <a href="4fungovani.html">Jak&nbsp;funguje</a>
         <a href="5rozpočet.html">Rozpočet</a>
         <a href="6tým.html">O&nbsp;nás</a>
+        <button id="tlacitko" class="theme-toggle" aria-label="Přepnout režim">🌙</button>
     </nav>
 </header>
 
@@ -30,7 +29,7 @@
     <div class="hero-content">
         <h1>Stavíme vlastní chytrou lednici</h1>
         <p>Moderní školní projekt propojující fyziku, hardware a technologie.</p><br>
-        <a href="zjisit více.html" class="btn hero-btn">Časté otázky</a>
+        <a href="zjisit více.html" class="hero-btn">Časté otázky</a>
     </div>
 </section>
 
@@ -48,28 +47,50 @@
     <p>Vymodelovány za pomoci Tinkercadu a Blenderu</p>
 
     <div class="features">
-        <div class="feature-box">
+        <div class="feature-box box">
             <h3>Efektivní chlazení</h3>
             <p>Je využit Peltierův článek.</p>
         </div>
 
-        <div class="feature-box">
+        <div class="feature-box box">
             <h3>Úsporný provoz</h3>
             <p>Optimalizace teploty pomocí ESP32 a termistoru.</p>
         </div>
 
-        <div class="feature-box">
+        <div class="feature-box box">
             <h3>Moderní konstrukce</h3>
             <p>Izolace, montážní pěna a přesné řízení komponent.</p>
         </div>
-    <br><br>
-    <img src="obrázky/real (1).jpg" alt="" height="600px">
 
+        <br><br>
+        <img src="obrázky/real (1).jpg" alt="Fotografie prototypu lednice" height="600">
     </div>
 </section>
 
 <footer>
     <p>2026 Naše chytrá lednice</p>
 </footer>
+
+<script>
+    const tlacitko = document.querySelector("#tlacitko");
+
+    // 1) Při načtení stránky nastavíme režim podle localStorage
+    if (localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("nocnimod");
+    }
+
+    // 2) Po kliknutí přepínáme režim
+    tlacitko.addEventListener('click', function() {
+        document.body.classList.toggle("nocnimod");
+
+        // 3) Uložíme volbu uživatele
+        if (document.body.classList.contains("nocnimod")) {
+            localStorage.setItem("mode", "dark");
+        } else {
+            localStorage.setItem("mode", "light");
+        }
+    });
+</script>
+
 </body>
 </html>
