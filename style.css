@@ -3,72 +3,61 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --primary-dark: #0a1f44;
     --primary-light: #5b8ab6;
+    --light: #adcef0ca;
 
     --white: #ffffff;
     --border: #ddd;
+    --border2: rgb(107, 107, 107);
 
-    --shadow-soft: 0 4px 12px rgba(0,0,0,0.05);
-    --shadow-header: 0 2px 10px rgba(0,0,0,0.05);
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-header: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+/* 🌙 DARK MODE – PŘES TVŮJ JS (třída na <body>) */
+.nocnimod {
+    --primary-dark: #dadfec;
+    --primary-light: #638cb2;
+    --light: #609cd7ca;
+
+    --white: #172a4a;
+    --border: #2a3a55;
+    --border2: #1d2a40;
+
+    --shadow-soft: 0 4px 12px rgba(0,0,0,0.4);
+    --shadow-header: 0 2px 10px #0f2443;
+
+    background: #132d53;
+    color: var(--primary-dark);
 }
 
-.sekce {
-    padding: 80px 10%;
-    text-align: center;
-}
 
-.sekce .intro {
-    /* max-width: 700px;*/
-    margin: 0 auto 40px;
-}
-
-/* GRID PRO VŠECHNY SEKCE */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 2rem;
-}
-.grid2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 3fr));
-    gap: 2rem;
-    text-align: left;
-}
 body {
     font-family: "Poppins", sans-serif;
     background: #f4f8fb;
     color: var(--primary-dark);
     line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Přepínač tématu */
-.theme-toggle {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    background: var(--primary-light);
-    box-shadow: var(--shadow-soft);
-    transition: 0.3s ease;
-}
 
-.theme-toggle:hover {
-    transform: rotate(20deg) scale(1.1);
-}
-
+/* =========================================================
+   HLAVIČKA & NAVIGACE
+========================================================= */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 8%;
+    padding: 15px 3%;
+    margin: 2px;
     background: var(--white);
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: var(--shadow-header);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .logo-wrap {
@@ -83,12 +72,20 @@ body {
     font-weight: 600;
 }
 
-.nav a {
-    margin-left: 25px;
+
+.nav {
     text-decoration: none;
     color: var(--primary-dark);
     font-weight: 500;
     transition: 0.2s;
+    margin-left: 80px;
+}
+a {
+    text-decoration: none;
+    color: var(--primary-dark);
+    font-weight: 500;
+    transition: 0.2s;
+    margin-left: 20px;
 }
 
 .nav a:hover {
@@ -102,53 +99,45 @@ body {
     padding-bottom: 3px;
 }
 
-.obroba {
-    justify-content: space-between;
+
+/* =========================================================
+   TLAČÍTKA & OVLÁDACÍ PRVKY
+========================================================= */
+.btn {
+    padding: 14px 32px;
+    background: var(--light);
+    color: var(--primary-dark);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
     align-items: center;
-}
-.obr:hover {
-    transform: scale(2);
-    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.hero {
-    height: 90vh;
-    background: linear-gradient(
-        to right,
-        var(--primary-dark),
-        var(--primary-light)
-    );
-    display: flex;
-    justify-content: center;
+.btn:hover {
+    background: var(--primary-dark);
+    scale: 1.02;
+    color: var(--border);
+}
+
+.btn2 {
+    padding: 18px 60px;
+    background: var(--light);
+    color: var(--primary-dark);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
     align-items: center;
-    text-align: center;
-    color: var(--white);
-    padding: 20px;
+    text-decoration: none;
+    display: inline-block;
 }
-
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-}
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-h3 {
-    text-align: center;
-}
-li {
-    margin-left: 40px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-.center {
-    text-align: center;
+.btn2:hover {
+    background: var(--primary-dark);
+    scale: 1.02;
+    color: var(--border);
 }
 
 .hero-btn {
@@ -159,30 +148,97 @@ li {
     font-weight: 600;
     text-decoration: none;
     transition: 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: inline-block;
 }
 
 .hero-btn:hover {
     background: var(--primary-dark);
-    color: var(--white);
+    color: var(--primary-light);
 }
 
+/* Přepínač režimu */
+.theme-toggle {
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: var(--primary-light);
+    color: var(--white);
+    font-size: 1.4rem;
+
+    box-shadow: var(--shadow-soft);
+    transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+
+/* =========================================================
+   HERO SEKCE
+========================================================= */
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 20px;
+    background: linear-gradient(120deg, var(--primary-dark), var(--primary-light));
+    background-size: 200% 200%;
+    animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
 .page-hero {
     padding: 80px 10%;
     text-align: center;
     background: var(--primary-light);
+    color: var(--white);
 }
 
-.page-hero h1 {
+.page-hero h1,
+.page-hero h2 {
     font-size: 3rem;
     margin-bottom: 10px;
 }
 
-.content-section {
-    padding: 60px 10%;
+
+/* =========================================================
+   OBECNÉ SEKCE & TEXT
+========================================================= */
+.sekce {
+    padding: 80px 10%;
+    text-align: center;
+    
 }
 
-.content-section.center {
-    text-align: center;
+.sekce .intro {
+    margin: 0 auto 40px;
 }
 
 .intro-section {
@@ -190,47 +246,45 @@ li {
     text-align: center;
 }
 
-.features {
-    display: flex;
-    justify-content: center;
+.content-section {
+    padding: 60px 10%;
+}
+
+.center {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+li {
+    margin-left: 40px;
+}
+
+
+/* =========================================================
+   GRID SYSTÉMY
+========================================================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 2rem;
-    margin-top: 40px;
-    flex-wrap: wrap;
 }
 
-.feature-box {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 12px;
-    width: 280px;
-    box-shadow: var(--shadow-soft);
-    transition: 0.2s;
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 3fr));
+    gap: 2rem;
+    text-align: left;
 }
 
-.feature-box:hover {
-    transform: translateY(-4px);
-}
-
-/* BOXY – JEDNOTNÝ STYL */
-.box {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: var(--shadow-soft);
-    transition: 0.2s;
-}
-
-/*.box:hover {
-    transform: translateY(-4px);
-}*/
-.box2 {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: var(--shadow-soft);
-}
-
-/* PROJECT GRID */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -238,43 +292,42 @@ li {
     margin-top: 40px;
 }
 
-.krabice {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: var(--shadow-soft);
-}
-
-/* COMPONENTS */
 .components-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 2rem;
 }
 
-.component-card {
-    background: var(--white);
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: var(--shadow-soft);
-}
 
-.component-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
-}
-
-/* STEPS */
-.step-box {
+/* =========================================================
+   BOXY
+========================================================= */
+.box,
+.krabice,
+.step-box,
+.component-card,
+.cena-card,
+.box2 {
     background: var(--white);
     padding: 25px;
     border-radius: 12px;
     box-shadow: var(--shadow-soft);
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
 }
 
-/* BUDGET TABLE */
+.component-card img {
+    width: 100%;
+  
+    margin-top: 15px;
+}
+img{
+    border-radius: 10px;
+}
+
+/* =========================================================
+   TABULKA ROZPOČTU
+========================================================= */
 .budget-table {
     width: 70%;
     margin: 0 auto;
@@ -293,14 +346,16 @@ li {
     background: var(--primary-light);
     color: var(--white);
 }
+
 .meziradek {
     background: var(--border);
     text-align: center;
-    margin-right: 30px;
-
 }
 
-/* CENA */
+
+/* =========================================================
+   CENÍK
+========================================================= */
 .cena-section {
     display: flex;
     justify-content: center;
@@ -311,11 +366,7 @@ li {
 
 .cena-card {
     width: 280px;
-    background: var(--white);
-    padding: 30px;
-    border-radius: 12px;
     text-align: center;
-    box-shadow: var(--shadow-soft);
     transition: 0.2s;
 }
 
@@ -328,30 +379,10 @@ li {
     font-weight: bold;
 }
 
-/* TEAM */
-/*.team-grid {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}vhdjfghfjhgfjcDTSHHDFJ
-DFGJ
-DGH
-JDGH
-JHGJ
-VHFH
 
-
-.team-card {
-    background: var(--white);
-    padding: 25px;
-    width: 310px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: var(--shadow-soft);
-}*/
-
-/* FORM */
+/* =========================================================
+   FORMULÁŘ
+========================================================= */
 .formulář-section {
     padding: 60px 10%;
     background: var(--primary-light);
@@ -379,27 +410,129 @@ VHFH
     gap: 20px;
 }
 
-.btn {
-    padding: 12px 25px;
-    background: var(--border);
-    color: var(--primary-dark);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.2s;
+
+/* =========================================================
+   OBRÁZKY
+========================================================= */
+.obroba {
+    justify-content: space-between;
+    align-items: center;
 }
 
-.btn:hover {
-    background: var(--primary-dark);
-    scale: 1.02;
-    color: var(--border);
+.obr:hover {
+    transform: scale(2);
+    transition: 0.3s;
 }
 
+
+/* =========================================================
+   PATIČKA
+========================================================= */
 footer {
     background: var(--primary-dark);
     color: var(--white);
     text-align: center;
     padding: 25px;
     margin-top: 40px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
+
+/* ===== TIMELINE ===== */
+.timeline-section {
+    padding: 80px 10%;
+}
+
+.timeline {
+    position: relative;
+    margin: 60px auto;
+    max-width: 900px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-light);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-date {
+    font-weight: 700;
+    color: var(--primary-light);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.timeline-content {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    border-left: 4px solid var(--primary-light);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    border-left: none;
+    border-right: 4px solid var(--primary-light);
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    width: 18px;
+    height: 18px;
+    background: var(--primary-light);
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    box-shadow: var(--shadow-soft);
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -9px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -9px;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        text-align: left;
+        left: 0;
+    }
+
+    .timeline-item::before {
+        left: 12px;
+    }
+
+    .timeline-content {
+        border-right: none;
+        border-left: 4px solid var(--primary-light);
+    }
+}
