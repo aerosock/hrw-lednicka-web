@@ -1,16 +1,15 @@
 <!doctype html>
 <html lang="cs">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Jak funguje</title>
-        <link rel="stylesheet" href="style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <header class="header">
+<head>
+    <meta charset="UTF-8" />
+    <title>Jak funguje</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+<header class="header">
     <div class="logo-wrap">
         <img src="logo1.png" height="45" alt="logo">
         <span class="site-title">Naše chytrá lednice</span>
@@ -23,88 +22,71 @@
         <a href="4fungovani.html" class="active">Jak&nbsp;funguje</a>
         <a href="5rozpočet.html">Rozpočet</a>
         <a href="6tým.html">O&nbsp;nás</a>
+        <button id="tlacitko" class="theme-toggle" aria-label="Přepnout režim">🌙</button>
     </nav>
 </header>
 
 <section class="page-hero">
-    <h1>Jak funguje lednice</h1>
+    <h1>Jak funguje naše lednice</h1>
     <p class="intro">Zjednodušený princip chlazení v našem modelu.</p>
 </section>
+
 <section class="sekce">
-	<h2>Existují čtyři odlišné principy chlazení ledniček</h2><br>
+    <h2>Principy chlazení</h2>
+
     <div class="components-grid">
         <div class="step-box">
-            <h3>1. Kompresorové</h3>
+            <h3>❄️ Kompresorové</h3>
             <p>Nejběžnější typ – pracuje na stlačování a expanzi chladiva.</p>
         </div>
 
         <div class="step-box">
-            <h3>2. Absorpční</h3>
+            <h3>🔥 Absorpční</h3>
             <p>Využívá teplo k pohonu okruhu. Tichý, ale méně účinný.</p>
         </div>
 
         <div class="step-box">
-            <h3>3. Adsorpční</h3>
+            <h3>🧱 Adsorpční</h3>
             <p>Chladivo se váže na pevnou látku. Bez pohyblivých částí.</p>
         </div>
 
         <div class="step-box">
-            <h3>4. Peltierův článek</h3>
+            <h3>⚡ Peltierův článek</h3>
             <p>Elektrický proud vytváří teplotní rozdíl mezi dvěma stranami.</p>
         </div>
     </div>
 </section>
 
-<section class="sekce">
-    <h2>Schéma zapojení naší ledničky</h2><br>
+<section class="sekce light">
+    <h2>Schéma zapojení</h2>
     <div class="obroba">
-        <img class="obr" src="obrázky/schema_zapojeni.png" height="400">
-        <img class="obr" src="obrázky/schema zapojeni.jpeg" height="400">
+        <img class="obr" src="obrázky/schema_zapojeni.png" height="400" alt="Schéma zapojení">
+        <img class="obr" src="obrázky/schema zapojeni.jpeg" height="400" alt="Schéma zapojení 2">
     </div>
 </section>
 
 <section class="page-hero">
-    <h2>Proč Peltierův článek?</h2>
+    <h2>Proč Peltier?</h2>
     <p>Jednoduchý, bezpečný, bez pohyblivých částí. Pro školní projekt ideální volba.</p>
 </section>
+
 <section class="sekce">
     <h2>Jak funguje Peltierovo chlazení</h2>
-    <p class="intro">Peltierův článek TEC1‑12715 přenáší teplo z jedné strany na druhou pomocí elektrického proudu.</p>
-    <p> Peltierovo chlazení funguje na termoelektrickém jevu, kdy elektrický proud přenáší teplo proti jeho přirozenému směru.</p><br>
-
-    <a href="https://www.youtube.com/watch?v=W4hrjl0b-2U" class="btn hero-btn">video: Vývoj solární lednice - stavba chlazení - zapojení</a><br><br><br><br>
 
     <div class="grid">
-        <div class="box">
-            <h3>1. Přivedení proudu</h3>
-            <p>Elektrický proud vytváří teplotní rozdíl mezi stranami článku.</p>
-        </div>
+        <div class="box"><h3>1️⃣ Přivedení proudu</h3><p>Elektrický proud vytváří teplotní rozdíl.</p></div>
+        <div class="box"><h3>2️⃣ Studená strana</h3><p>Ochladí vnitřní prostor lednice.</p></div>
+        <div class="box"><h3>3️⃣ Teplá strana</h3><p>Teplo je odváděno ven vodním chlazením.</p></div>
+        <div class="box"><h3>4️⃣ Radiátor</h3><p>Radiátor odvádí teplo do okolí.</p></div>
+    </div>
 
-        <div class="box">
-            <h3>2. Studená strana</h3>
-            <p>Vnitřní prostor lednice se ochlazuje.</p>
-        </div>
-
-        <div class="box">
-            <h3>3. Teplá strana</h3>
-            <p>Teplo je odváděno ven pomocí vodního chlazení.</p>
-        </div>
-
-        <div class="box">
-            <h3>4. Radiátor a ventilátory</h3>
-            <p>Radiátor odvádí teplo do okolí.</p>
-        </div>
-    </div><br><br>
-
-    <a href="peltieruvclanek.html" class="btn hero-btn">Podrobnější vysvěštlení</a>
+    <br>
+    <a href="peltieruvclanek.html" class="btn hero-btn">Podrobnější vysvětlení</a>
 </section>
 
-<!-- ELEKTRONIKA -->
-<section class="page-hero">
+<section class="sekce light">
     <h2>Elektronické řízení</h2>
-    <p class="intro">
-        ESP32 řídí výkon Peltierova článku pomocí PWM a MOSFET tranzistoru.
-    </p>
+    <p class="intro">ESP32 řídí výkon Peltierova článku pomocí PWM a MOSFET tranzistoru.</p>
 
     <div class="grid">
         <div class="box"><h3>ESP32</h3><p>Řídicí jednotka systému.</p></div>
@@ -114,34 +96,50 @@
     </div>
 </section>
 
-<!-- KONSTRUKCE -->
 <section class="sekce">
     <h2>Konstrukce lednice</h2>
-    <p class="intro">
-        Konstrukce využívá principu „krabice v krabici“ s pěnovou izolací.
-    </p><br>
+    <p class="intro">Konstrukce využívá principu „krabice v krabici“ s pěnovou izolací.</p>
 
     <div class="grid">
-        <div class="box"><h3>Vnější schránka</h3><p>Nosná konstrukce. /**/</p></div>
-        <div class="box"><h3>Vnitřní schránka</h3><p>Chlazený prostor.</p>
-                <p>Využití regulerního chadiče PCU a vodního chadiče</p></div>
-        <div class="box"><h3>Izolace</h3><p>Montážní pěna minimalizuje ztráty.</p></div>
+        <div class="box"><h3>🟦 Vnější schránka</h3><p>Nosná konstrukce.</p></div>
+        <div class="box"><h3>🟩 Vnitřní schránka</h3><p>Chlazený prostor s chladiči.</p></div>
+        <div class="box"><h3>🟨 Izolace</h3><p>Montážní pěna minimalizuje tepelné ztráty.</p></div>
     </div>
 </section>
 
-
-<section class="page-hero">
+<section class="sekce light">
     <h2>Testování a měření</h2>
-    <p class="intro">Sledovali jsme stabilitu, rychlost chlazení a efektivitu.</p>
 
     <div class="grid">
-        <div class="box"><h3>Stabilita</h3><p>±1 °C od cílové hodnoty.</p></div>
-        <div class="box"><h3>Rychlost chlazení</h3><p>20 °C → 5 °C za 18 minut.</p></div>
+        <div class="box"><h3>📉 Stabilita</h3><p>±1 °C od cílové hodnoty.</p></div>
+        <div class="box"><h3>⏱️ Rychlost chlazení</h3><p>20 °C → 5 °C za 18 minut.</p></div>
     </div>
 </section>
 
-        <footer>
-            <p>2026 Naše chytrá lednice</p>
-        </footer>
-    </body>
+<footer>
+    <p>2026 Naše chytrá lednice</p>
+</footer>
+
+<script>
+    const tlacitko = document.querySelector("#tlacitko");
+
+    // 1) Při načtení stránky nastavíme režim podle localStorage
+    if (localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("nocnimod");
+    }
+
+    // 2) Po kliknutí přepínáme režim
+    tlacitko.addEventListener('click', function() {
+        document.body.classList.toggle("nocnimod");
+
+        // 3) Uložíme volbu uživatele
+        if (document.body.classList.contains("nocnimod")) {
+            localStorage.setItem("mode", "dark");
+        } else {
+            localStorage.setItem("mode", "light");
+        }
+    });
+</script>
+
+</body>
 </html>
