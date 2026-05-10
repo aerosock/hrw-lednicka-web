@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <title>Časová osa vývoje</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo-wrap">
+        <img src="logo1.png" height="45" alt="logo">
+        <span class="site-title">Naše chytrá lednice</span>
+    </div>
+
+    <nav class="nav">
+        <a href="index.html">Domů</a>
+        <a href="2projekt.html">Projekt</a>
+        <a href="3komponenty.html">Komponenty</a>
+        <a href="4fungovani.html">Jak&nbsp;funguje</a>
+        <a href="5rozpočet.html">Rozpočet</a>
+        <a href="6tým.html">O&nbsp;nás</a>
+        <button id="tlacitko" class="theme-toggle" aria-label="Přepnout režim">🌙</button>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h1>Časová osa vývoje</h1>
+    <p>Jak náš projekt postupně vznikal – od prvních nápadů až po finální dokumentaci.</p>
+</section>
+
+<section class="timeline-section">
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-date">Leden</div>
+            <div class="timeline-content">
+                <h3>Výzkum a příprava</h3>
+                <p>Studium principů chlazení, výběr komponent, první návrhy konstrukce.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">Únor</div>
+            <div class="timeline-content">
+                <h3>Prototypování</h3>
+                <p>Zapojení elektroniky na nepájivém poli, testování Peltierova článku a senzorů.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">Březen</div>
+            <div class="timeline-content">
+                <h3>Konstrukce</h3>
+                <p>Stavba vnitřní a vnější krabice, návrh 3D dílů, montáž chlazení.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">Duben</div>
+            <div class="timeline-content">
+                <h3>Testování</h3>
+                <p>Měření teplot, ladění PWM, stabilita chlazení, úpravy konstrukce.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">Květen</div>
+            <div class="timeline-content">
+                <h3>Dokumentace</h3>
+                <p>Sepsání maturitní práce, dokončení webu, příprava prezentace.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>2026 Naše chytrá lednice</p>
+</footer>
+
+<script>
+    const tlacitko = document.querySelector("#tlacitko");
+
+    // 1) Při načtení stránky nastavíme režim podle localStorage
+    if (localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("nocnimod");
+    }
+
+    // 2) Po kliknutí přepínáme režim
+    tlacitko.addEventListener('click', function() {
+        document.body.classList.toggle("nocnimod");
+
+        // 3) Uložíme volbu uživatele
+        if (document.body.classList.contains("nocnimod")) {
+            localStorage.setItem("mode", "dark");
+        } else {
+            localStorage.setItem("mode", "light");
+        }
+    });
+</script>
+
+
+</body>
+</html>
