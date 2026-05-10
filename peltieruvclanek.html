@@ -2,7 +2,7 @@
 <html lang="cs">
     <head>
         <meta charset="UTF-8" />
-        <title>Naše chytrá lednice</title>
+        <title>Peltierův článek</title>
         <link rel="stylesheet" href="style.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
@@ -24,10 +24,11 @@
                 <a href="4fungovani.html" class="active">Jak&nbsp;funguje</a>
                 <a href="5rozpočet.html">Rozpočet</a>
                 <a href="6tým.html">O&nbsp;nás</a>
+                <button id="tlacitko" class="theme-toggle" aria-label="Přepnout režim">🌙</button>
             </nav>
         </header>
 
-        <section class="sekce">
+<section class="sekce">
             <h2>Jak funguje Peltierovo chlazení</h2>
             <div class="grid2">
                 <div class="component-card">
@@ -191,8 +192,30 @@
             </div>
         </section>
 
-        <footer>
-            <p>2026 Naše chytrá lednice</p>
-        </footer>
-    </body>
+<footer>
+    <p>2026 Naše chytrá lednice</p>
+</footer>
+
+<script>
+    const tlacitko = document.querySelector("#tlacitko");
+
+    // 1) Při načtení stránky nastavíme režim podle localStorage
+    if (localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("nocnimod");
+    }
+
+    // 2) Po kliknutí přepínáme režim
+    tlacitko.addEventListener('click', function() {
+        document.body.classList.toggle("nocnimod");
+
+        // 3) Uložíme volbu uživatele
+        if (document.body.classList.contains("nocnimod")) {
+            localStorage.setItem("mode", "dark");
+        } else {
+            localStorage.setItem("mode", "light");
+        }
+    });
+</script>
+
+</body>
 </html>
