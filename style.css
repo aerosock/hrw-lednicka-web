@@ -298,6 +298,15 @@ li {
     gap: 2rem;
 }
 
+@media (max-width: 1100px) {
+    .grid,
+    .grid2,
+    .project-grid,
+    .components-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* =========================================================
    BOXY
@@ -314,14 +323,6 @@ li {
     box-shadow: var(--shadow-soft);
     transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     align-items: center;
-}
-@media (max-width: 1000px) {
-    .grid,
-    .grid2,
-    .project-grid,
-    .components-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 .component-card img {
@@ -548,3 +549,9 @@ footer {
         border-right: none;
         border-left: 4px solid var(--primary-light);
     }}
+
+@media (max-width: 1100px) {
+    body {
+        font-size: 1.4rem;
+    }
+}
