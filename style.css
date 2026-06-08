@@ -315,6 +315,14 @@ li {
     transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     align-items: center;
 }
+@media (max-width: 700px) {
+    .grid,
+    .grid2,
+    .project-grid,
+    .components-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 .component-card img {
     width: 100%;
