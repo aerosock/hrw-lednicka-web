@@ -555,6 +555,9 @@ footer {
         border-right: none;
         border-left: 4px solid var(--primary-light);
     }
+    .timeline-date {
+        font-size: 2.5rem;
+    }
 }
 
 
