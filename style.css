@@ -573,3 +573,21 @@ footer {
         font-size: 3.5rem;
     }
 }
+
+.progress-bar {
+                position: fixed;
+                inset: 0 0 auto;
+                height: 10px;
+                z-index: 100;
+                background: linear-gradient(90deg, #a0aaff, #85ffff, #348492);
+                /*background: linear-gradient(90deg, rgb(0, 255, 183), blue);*/
+                transform: scaleX(0);
+                transform-origin: 0;
+                animation: progress linear;
+                animation-timeline: scroll(root);
+            }
+@keyframes progress {
+    100% {
+        transform: scaleX(1);
+    }
+}
