@@ -529,16 +529,22 @@ footer {
     left: -9px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .timeline::before {
-        left: 20px;
+        display: none;
+    }
+    .timeline-item::before {
+        display: none;
     }
 
     .timeline-item {
         width: 100%;
-        padding-left: 60px;
         text-align: left;
         left: 0;
+        padding-bottom: 50px;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0%;
     }
 
     .timeline-item::before {
@@ -548,7 +554,9 @@ footer {
     .timeline-content {
         border-right: none;
         border-left: 4px solid var(--primary-light);
-    }}
+    }
+}
+
 
 @media (max-width: 1100px) {
     body {
